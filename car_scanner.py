@@ -122,7 +122,7 @@ def get_analysis(product_name):
     - Best Years:
     - Best Trims:
 
-     12. Sources: List URLs and a optimized google search link to get more info for {product_name}.
+     12. Sources: List URLs and a clickable google search link to get more info for {product_name}.
     - References:
     """
         response = client.chat.completions.create(
