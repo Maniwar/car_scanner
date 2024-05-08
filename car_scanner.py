@@ -62,42 +62,74 @@ def get_analysis(product_name):
     if result is not None:
         return result
     else:
-        prompt = f"""Your primary role is to thoroughly analyze the '{product_name}', focusing on its specifications and features, and provide a factual report about it. If comparing multiple, you should always use a table to offer a clear comparison to help the user make an informed choice. Please use section dividers to separate all these points.
-        
-                                For this task, organize your output into the following sections:
-        
-                                1. **Overall Vehicle Assessment**: State the year, make, model, and trim, and provide an overall rating for the it (from 1 to 10, where 1 is least recommended and 10 is highly recommended, marked with a single icon: 🔴 for poor features, ⚪ for average features, 🟢 for good features, and 🟡 for exceptional features) in a table, and also provide a brief summary of the it's performance and suitability based on its specifications below that. If a score is lower for one car over another, please help to explain why at the end of this section.
-        
-                                2. **Feature Analysis**: Present the features in a bullet list format; if more than one, ensure there are separate lists for each, labeled so we know which they relate to. The lists should include the following headings:
-                                    - 'Feature'
-                                    - '0 to 60mph'
-                                    - 'Technology'
-                                    - 'Characteristics'
-                                    - 'Options and Trims'
-                                    - 'Special Info'
-                                    - 'Description' (to explain what the feature is and how it benefits you)
-                                    - 'Reason for Score'
-                                    - 'Feature Rating' (marked with icons: 🔴 for poor features, ⚪ for average features, 🟢 for good features, and 🟡 for exceptional features)
-                                    - 'Reliability Rating'
-                                    - 'Value'
-                                    - 'Depreciation'
-        
-                                If exceptional features are found, immediately below the table, provide a legend for the icons used in the 'Feature Rating' column, explaining that 🟡 represents exceptional features that significantly enhance the driving experience.
-        
-                                3. **Specifications**: Include the specifications in a secondary table. If more than one, include both in one table.
-        
-                                4. **Safety Features**: Highlight key safety features and their importance. Identify any areas where the it might lack in safety or has exceptional safety features. Discuss any relevant test ratings and what they imply.
-        
-                                5. **Sources**: Cite all your references under this heading. Each source should be linked to its original location.
-        
-                                6. **Comparable Models**: Offer a bullet list of similar ones for comparison, noting key differences in features and specifications.
-                               
-                                7. **Caution**: Offer a buller list of things to watch out for in terms of common problems. 
-                                
-                                8. **Fun Facts and Neat Quirks**: Offer a bullet list of fun facts and quirks about it.
-                                
-                                9. **Best Years & Trim**: Offer advice on which represents the best years and trim for the model and provide reasoning behide why."""
+        prompt = f"""As a cheeky and outspoken British car reviewer, provide a comprehensive vehicle report for the U.S. market based on the provided information. Use humor and a straightforward tone to critique and praise as appropriate:
 
+    ## Comprehensive Vehicle Report Outline
+
+    ### 1. Executive Summary
+    - **Overview**: Year: {product_name}, Make: {product_name['make']}, Model: {product_name['model']}, Trim: {product_name['trim']}
+    - **Overall Rating**: (Rate from 1 to 10; use icons: 🔴 for 1-3 'abysmal', ⚪ for 4-6 'mediocre', 🟢 for 7-9 'rather good', 🟡 for 10 'utterly splendid')
+    - **Summary**: Give a brief and witty commentary on the vehicle's performance and suitability.
+
+    ### 2. Detailed Feature Analysis
+    - **Features**:
+      - `Feature Name`:
+        - **0 to 60mph**: How does it stack up against the clock? Is it a speed demon or more of a Sunday driver?
+        - **Technology**: Does it pack enough tech to launch a rocket or barely enough to power a calculator?
+        - **Characteristics**: Is it a head-turner or does it blend into the crowd like a chameleon?
+        - **Options and Trims**: Are the choices as vast as a buffet or as limited as a diet menu?
+        - **Special Info**: Any accolades to brag about or is it as award-winning as a pet rock?
+        - **Description**: How does each feature elevate the motoring experience or fall flat?
+        - **Reason for Score**: Why does this chariot deserve its rating? Be brutally honest.
+        - **Feature Rating**: (🔴, ⚪, 🟢, 🟡)
+        - **Reliability Rating**: Can it survive a cross-country odyssey or is it best kept within city limits?
+        - **Value**: Does it offer a bang for your buck or is it daylight robbery?
+        - **Depreciation**: Will it hold onto its value like a miser or shed pounds faster than a crash diet?
+
+    ### 3. Comprehensive Specifications
+    - **Specifications**:
+      - Provide details for comparison if analyzing multiple chariots.
+
+    ### 4. Safety Features and Ratings
+    - **Key Safety Features**: What keeps you safe apart from hopes and prayers?
+    - **Safety Concerns**: Any glaring gaps in its armor?
+    - **Safety Ratings**: Is it as secure as Fort Knox or more like a cardboard fort?
+
+    ### 5. Financial Assessment
+    - **Purchase Cost**: Is it a steal or are you being robbed?
+    - **Financing Options**: Can you afford this beast without selling a kidney?
+    - **Insurance Considerations**: Will insuring this be a breeze or a bank breaker?
+    - **Depreciation Rate**: Fast as a racing car or slow as a parade float?
+    - **Financial Tips**: How to avoid financial ruin while indulging your automotive passions?
+
+    ### 6. Buying Tips
+    - **Selection Guidance**: Choosing the right steed for your stable.
+    - **Optimal Purchase Time**: Best time to buy to avoid getting fleeced.
+    - **Negotiation Tactics**: Haggling tips to make market traders weep.
+    - **Pre-purchase Inspections**: Ensuring you don’t buy a polished lemon.
+
+    ### 7. Maintenance and Upkeep
+    - **Maintenance Schedule**: Keep it purring like a kitten.
+    - **Common Issues**: Common gremlins to watch out for.
+    - **Longevity Tips**: How to keep it running longer than expected.
+
+    ### 8. Comparable Models
+    - **Model Comparisons**:
+
+    ### 9. Potential Issues and Cautions
+    - **Common Problems**:
+    - **Warning Signs**: 
+
+    ### 10. Fun Facts and Unique Quirks
+    - **Interesting Details**:
+
+    ### 11. Recommendations on Best Years & Trims
+    - **Best Years**:
+    - **Best Trims**:
+
+    ### 12. Sources
+    - **References**:
+    """
         response = client.chat.completions.create(
             model="gpt-4-turbo",
             messages=[
