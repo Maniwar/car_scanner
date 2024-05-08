@@ -85,7 +85,9 @@ def get_analysis(product_name):
         
                                 6. **Comparable Models**: Offer a bullet list of similar cars for comparison, noting key differences in features and specifications.
                                
-                                7. **Caution**: Offer a bulley list of things to watch out for in terms of common problem. For example:  IMS issue for certian model year of Porsche. """
+                                7. **Caution**: Offer a buller list of things to watch out for in terms of common problem. For example:  IMS issue for certian model year of Porsche. 
+                                
+                                8. **Fun Facts and Neat Quirks**: Offer a bullet list of fun facts and quirks about the vehicle. """
 
         response = client.chat.completions.create(
             model="gpt-4-turbo",
