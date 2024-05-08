@@ -171,7 +171,7 @@ elif input_method == "File Upload":
             # Define user message content
             user_message_content = {
                 "type": "text",
-                "text": """Reply with only the car year, make, and model name. """
+                "text": """Reply with only the car's or motorcycle's year, make, and model name. """
             }
             
             # Send image and user message to OpenAI API
@@ -228,7 +228,7 @@ elif input_method == "Camera Capture":
             # Define user message content
             user_message_content = {
                 "type": "text",
-                "text": """Reply with only the car or motorcycle year, make, and model, and specifications name. Example: 2002 honda accord ex """
+                "text": """Reply with only the car's or motorcycle's year, make, and model, and specifications name. Example: 2002 honda accord ex """
             }
             
             # Send image and user message to OpenAI API
