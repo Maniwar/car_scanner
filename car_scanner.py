@@ -83,7 +83,9 @@ def get_analysis(product_name):
         
                                 5. **Sources**: Cite all your references under this heading. Each source should be linked to its original location. List applicable automotive publications or testing results that support your analysis, providing links for each.
         
-                                6. **Comparable Models**: Offer a bullet list of similar cars for comparison, noting key differences in features and specifications."""
+                                6. **Comparable Models**: Offer a bullet list of similar cars for comparison, noting key differences in features and specifications.
+                               
+                                7. **Caution**: Offer a bulley list of things to watch out for in terms of common problem. For example:  IMS issue for certian model year of Porsche. """
 
         response = client.chat.completions.create(
             model="gpt-4-turbo",
