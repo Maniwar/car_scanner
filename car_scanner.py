@@ -121,9 +121,9 @@ if input_method == "Search Box":
     # Instruction for using the search box
     st.markdown("""
     **Instructions for Search Box:**
-    - Enter the Cars model, make, and year you want to analyze in the search box.
+    - Enter the car's year, make, and model in the search box.
     - Select it from the drop down menu.
-    - Click "Search" to start the analysis. The AI will generate a report, which may take longer for first-time product searches.
+    - Click "Search" to start the analysis. The AI will generate a report, which may take longer for first-time car searches.
     """)
     product_name = st_searchbox(
         search_function=get_search_suggestions,
