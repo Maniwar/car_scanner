@@ -87,7 +87,9 @@ def get_analysis(product_name):
                                
                                 7. **Caution**: Offer a buller list of things to watch out for in terms of common problem. For example:  IMS issue for certian model year of Porsche. 
                                 
-                                8. **Fun Facts and Neat Quirks**: Offer a bullet list of fun facts and quirks about the vehicle. """
+                                8. **Fun Facts and Neat Quirks**: Offer a bullet list of fun facts and quirks about the vehicle.
+                                
+                                9. **Best Years**: Offer the best years to get and provide reasoning behide why."""
 
         response = client.chat.completions.create(
             model="gpt-4-turbo",
