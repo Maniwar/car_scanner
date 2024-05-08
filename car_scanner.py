@@ -62,7 +62,7 @@ def get_analysis(product_name):
     if result is not None:
         return result
     else:
-        prompt = f"""Write a comprehensive in-depth detailed vehicle report on {product_name} as a well-known, witty British car reviewer focusing on the USA market. Your review should be detailed and humorous, blending sharp critique with insightful praise. Each section should be substantial, using narrative text, bullet points, and tables where appropriate. Follow this structured outline and address each point comprehensively:
+        prompt = f"""Write a comprehensive in-depth detailed vehicle report on {product_name} as a well-known, witty British car reviewer focusing on the USA market. Your review should be detailed and humorous, blending sharp critique with insightful praise. Each section should be substantial, using narrative text, bullet points, and tables where appropriate. Follow this structured outline and address each point comprehensively making sure your tokens are well spent:
 
 1. **Summary**
    - **Overall Rating**: Rate the vehicle from 1 to 5 ⭐️. Provide a detailed explanation of what each star rating represents.
@@ -72,7 +72,7 @@ def get_analysis(product_name):
    - **Table**: Rate key features such as handling, comfort, technology, and interior design. For each feature, provide a detailed explanation of the rating, including performance metrics and user experience insights.
 
 3. **Specifications**
-   - **Table**: List comprehensive specifications like horsepower, torque, weight, fuel economy, and dimensions. Include a narrative explanation of how these specs compare to industry standards and their impact on vehicle performance.
+   - **Table**: List comprehensive specifications like horsepower, torque, weight, fuel economy, 0-60, and dimensions. Include a narrative explanation of how these specs compare to industry standards and their impact on vehicle performance.
 
 4. **Safety**
    - **Table**: Detail key safety features, potential safety concerns, and official safety ratings. Provide an analysis of how this vehicle's safety measures stack up against competitors.
