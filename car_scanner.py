@@ -62,41 +62,44 @@ def get_analysis(product_name):
     if result is not None:
         return result
     else:
-        prompt = f"""Write a vehicle report on {product_name} as a well-known, witty British car reviewer for the USA market. Be humorous and informative, balancing critique with praise. Use the following outline:
+        prompt = f"""Write an in-depth vehicle report on {product_name} as a well-known, witty British car reviewer focusing on the USA market. Your review should be detailed and humorous, blending sharp critique with insightful praise. Each section should be substantial, using narrative text, bullet points, and tables where appropriate. Follow this structured outline and address each point comprehensively:
 
 1. **Summary**
-   - **Overall Rating**: 1-5 stars; explain the scale with icons: ⭐️ (poor) to ⭐️⭐️⭐️⭐️⭐️ (excellent).
-   - **Overview & Review**: Discuss year, make, model, and trim, focusing on vehicle's appeal or shortcomings.
+   - **Overall Rating**: Rate the vehicle from 1 to 5 stars. Provide a detailed explanation of what each star rating represents.
+   - **Overview & Review**: Offer a thorough review discussing the year, make, model, and trim. Highlight unique features, overall performance, and market appeal. Include anecdotes or comparisons to bring the review to life.
 
 2. **Feature Analysis**
-   - Rate features like handling, comfort, and technology using the star system.
+   - **Table**: Rate key features such as handling, comfort, technology, and interior design. For each feature, provide a detailed explanation of the rating, including performance metrics and user experience insights.
 
 3. **Specifications**
-   - List specs such as horsepower, weight, and fuel economy.
+   - **Table**: List comprehensive specifications like horsepower, torque, weight, fuel economy, and dimensions. Include a narrative explanation of how these specs compare to industry standards and their impact on vehicle performance.
 
 4. **Safety**
-   - Discuss key features, concerns, and official ratings.
+   - **Table**: Detail key safety features, potential safety concerns, and official safety ratings. Provide an analysis of how this vehicle's safety measures stack up against competitors.
 
 5. **Financial Assessment**
-   - Cover purchase cost, insurance factors, and depreciation.
+   - Discuss the purchase cost, insurance factors, and depreciation rates. Provide a detailed analysis of the vehicle's value for money, including cost comparisons with similar models.
 
 6. **Maintenance**
-   - Detail service intervals, common issues, and longevity tips.
+   - Outline the recommended maintenance schedule and detail common issues and solutions. Provide longevity tips and discuss the ease of service and parts availability.
 
-7. **Comparisons**
-   - Compare with similar models.
+7. **Comparable Models**
+   - **Table**: Compare this model with at least three similar models. Discuss strengths and weaknesses in detail, focusing on performance, value, and feature set.
 
 8. **Issues and Cautions**
-   - List common problems and warning signs.
+   - Elaborate on common problems associated with this model and warning signs that potential buyers should be aware of. Include troubleshooting tips or preventive measures.
 
 9. **Unique Aspects**
-   - Highlight fun facts and quirks.
+   - List and explain any fun facts, hidden features, or unique quirks of the vehicle. Describe why these features might appeal to potential buyers.
 
 10. **Recommendations**
-   - Suggest best years and trims.
+   - Provide recommendations on the best years and trims to purchase. Discuss any specific editions or configurations that offer the best value or performance.
 
 11. **Sources**
-   - Include links for further reading about {product_name}.
+   - Include a list of references and clickable links for detailed exploration of {product_name}.
+
+Ensure each section is rich with detail and context, using clear, engaging language that reflects the style of a seasoned automotive critic. Your review should not only inform but also entertain the reader, providing a comprehensive understanding of the vehicle's place in the market.
+
 """
         response = client.chat.completions.create(
             model="gpt-4-turbo",
