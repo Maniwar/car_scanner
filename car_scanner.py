@@ -161,7 +161,7 @@ elif input_method == "File Upload":
     **Instructions for File Upload:**
     - Click 'Upload an Image' to select an image file from your device.
     - Supported formats are JPG and PNG.
-    - The app will analyze the image and extract the Vehicle for further analysis.
+    - The app will analyze the image and extract the vehicle for further analysis.
     """)
     uploaded_image = st.file_uploader("Upload an image", type=['jpg', 'png'])
     
