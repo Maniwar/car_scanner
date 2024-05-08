@@ -66,38 +66,38 @@ def get_analysis(product_name):
 
     ## Comprehensive Vehicle Report Outline
     ### 1. Executive Summary
-    - **Overview**: Year: {product_name['year']}, Make: {product_name['make']}, Model: {product_name['model']}, Trim: {product_name['trim']}
-    - **Overall Rating**: (Rate from 1 to 10; use icons: 🔴 for 1-3 'a miserable disappointment', ⚪ for 4-6 'utterly mundane', 🟢 for 7-9 'surprisingly tolerable', 🟡 for 10 'an absolute revelation')
+    - **Overview**: Year: {product_name 'year', Make: {product_name 'make', Model: {product_name}'model', Trim: {product_name}'trim'
+    - **Overall Rating**: Rate from 1 to 10; use icons: 🔴 for 1-3 'a miserable disappointment', ⚪ for 4-6 'utterly mundane', 🟢 for 7-9 'surprisingly tolerable', 🟡 for 10 'an absolute revelation'
     - **Summary**: Provide a brief and humorous overview of the vehicle's overall charm or lack thereof.
     ### 2. Detailed Feature Analysis
     - **Features**:
       - **0 to 60mph**: {product_name['0_to_60']} seconds. Does it bolt like a cheetah or amble like a tranquilized sloth?
       - **Technology**: {product_name['technology']}. Is it brimming with more gadgets than a Bond car or does it flounder with the tech savviness of a stone?
-      - **Characteristics**: {product_name['characteristics']}. Does its design turn heads or is it as inspiring as watching paint dry?
-      - **Options and Trims**: {product_name['options_trims']}. Are there enough choices to confuse a rocket scientist?
-      - **Special Info**: {product_name['special_info']}. Any standout accolades, or is it as celebrated as last year's soggy chips?
-      - **Description**: It sprints from 0 to 60 mph in {product_name['0_to_60']} seconds, demonstrating its sporty pedigree or shocking lack thereof.
+      - **Characteristics**: {product_name} 'characteristics'. Does its design turn heads or is it as inspiring as watching paint dry?
+      - **Options and Trims**: {product_name} 'options_trims'. Are there enough choices to confuse a rocket scientist?
+      - **Special Info**: {product_name} 'special_info'. Any standout accolades, or is it as celebrated as last year's soggy chips?
+      - **Description**: It sprints from 0 to 60 mph in {product_name} 0 to 60pmh seconds, demonstrating its sporty pedigree or shocking lack thereof.
       - **Reason for Score**: Why this score? Because in the world of cars, it’s either a hero or a zero.
-      - **Feature Rating**: {product_name['feature_rating']} (🟢)."
-      - **Reliability Rating**: {product_name['reliability']}. Is it reliable as gravity or as unpredictable as a lottery?
-      - **Value**: {product_name['value']}. Does it offer bang for your buck or is it daylight robbery?"
-      - **Depreciation**: {product_name['depreciation']}. Will it hold its value like a precious heirloom or plunge like a stone in a pond?
+      - **Feature Rating**: {product_name} feature_rating' 
+      - **Reliability Rating**: {product_name} reliability'. Is it reliable as gravity or as unpredictable as a lottery?
+      - **Value**: {product_name} value'. Does it offer bang for your buck or is it daylight robbery?
+      - **Depreciation**: {product_name}'depreciation'. Will it hold its value like a precious heirloom or plunge like a stone in a pond?
 
     ### 3. Comprehensive Specifications
     - **Specifications**:
-      - Provide detailed specs and how they stand up against rivals.
+      - Provide detailed specs and how {product_name} stands up against rivals.
 
     ### 4. Safety Features and Ratings
-    - **Key Safety Features**: What innovative measures does it have to keep you intact rather than in pieces?
+    - **Key Safety Features**: What innovative measures does {product_name} have to keep you intact rather than in pieces?
     - **Safety Concerns**: Any alarming omissions?
     - **Safety Ratings**: More like a tank or a tin can?
 
     ### 5. Financial Assessment
-    - **Purchase Cost**: Is it a bargain or does it demand an arm and a leg?
-    - **Financing Options**: Can you afford it without signing away your firstborn?
+    - **Purchase Cost**: Is {product_name} a bargain or does it demand an arm and a leg?
+    - **Financing Options**: Can you afford {product_name} without signing away your firstborn?
     - **Insurance Considerations**: Will you sleep easy or weep at the premiums?
     - **Depreciation Rate**: Rapid as a meteorite or slow as continental drift?
-    - **Financial Tips**: How to own it without remortgaging your soul?
+    - **Financial Tips**: How to own {product_name} without remortgaging your soul?
 
     ### 6. Buying Tips
     - **Selection Guidance**: How to pick the gem among the stones.
@@ -111,7 +111,7 @@ def get_analysis(product_name):
     - **Longevity Tips**: How to prolong its lifespan beyond what's expected.
 
     ### 8. Comparable Models
-    - **Model Comparisons**: How it measures up to its contemporaries.
+    - **Model Comparisons**: How {product_name} measures up to its contemporaries.
 
     ### 9. Potential Issues and Cautions
     - **Common Problems**:
