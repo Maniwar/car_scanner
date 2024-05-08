@@ -70,10 +70,17 @@ def get_analysis(product_name):
         
                                 2. **Feature Analysis**: Present the features in a table format; if more than one, ensure there are separate tables for each, labeled so we know which they relate to. The table(s) should include the following columns:
                                     - 'Feature'
+                                    - '0 to 60mph'
+                                    - 'Technology'
+                                    - 'Characteristics'
+                                    - 'Options and Trims'
+                                    - 'Special Info'
                                     - 'Description' (to explain what the feature is and how it benefits you)
                                     - 'Reason for Score'
                                     - 'Feature Rating' (marked with icons: 🔴 for poor features, ⚪ for average features, 🟢 for good features, and 🟡 for exceptional features)
                                     - 'Reliability Rating'
+                                    - 'Value'
+                                    - 'Depreciation'
         
                                 If exceptional features are found, immediately below the table, provide a legend for the icons used in the 'Feature Rating' column, explaining that 🟡 represents exceptional features that significantly enhance the driving experience.
         
