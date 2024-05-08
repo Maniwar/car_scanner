@@ -204,7 +204,7 @@ elif input_method == "Camera Capture":
     st.markdown("""
     **Instructions for Camera Capture:**
     - Snap a photo of the car.
-    - Ensure the pciture is legible to optimize analysis accuracy.
+    - Ensure the picture is legible to optimize analysis accuracy.
     - The app will process the captured image to identify the car.
     """)
     captured_image = st.camera_input("Capture an image")
