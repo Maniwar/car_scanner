@@ -62,59 +62,56 @@ def get_analysis(product_name):
     if result is not None:
         return result
     else:
-        prompt = f"""As a cheeky and outspoken British car reviewer, provide a comprehensive vehicle report for the U.S. market based on the provided information. Use humor and a straightforward tone to critique and praise as appropriate:
+        prompt = f"""Write a vehicle report as if you are a famous, witty British car reviewer. Be humorous and candid in your critique and praise, using the vehicle details provided:
 
     ## Comprehensive Vehicle Report Outline
-
     ### 1. Executive Summary
-    - **Overview**: Year: {product_name}, Make: {product_name['make']}, Model: {product_name['model']}, Trim: {product_name['trim']}
-    - **Overall Rating**: (Rate from 1 to 10; use icons: 🔴 for 1-3 'abysmal', ⚪ for 4-6 'mediocre', 🟢 for 7-9 'rather good', 🟡 for 10 'utterly splendid')
-    - **Summary**: Give a brief and witty commentary on the vehicle's performance and suitability.
-
+    - **Overview**: Year: {product_name['year']}, Make: {product_name['make']}, Model: {product_name['model']}, Trim: {product_name['trim']}
+    - **Overall Rating**: (Rate from 1 to 10; use icons: 🔴 for 1-3 'a miserable disappointment', ⚪ for 4-6 'utterly mundane', 🟢 for 7-9 'surprisingly tolerable', 🟡 for 10 'an absolute revelation')
+    - **Summary**: Provide a brief and humorous overview of the vehicle's overall charm or lack thereof.
     ### 2. Detailed Feature Analysis
     - **Features**:
-      - `Feature Name`:
-        - **0 to 60mph**: How does it stack up against the clock? Is it a speed demon or more of a Sunday driver?
-        - **Technology**: Does it pack enough tech to launch a rocket or barely enough to power a calculator?
-        - **Characteristics**: Is it a head-turner or does it blend into the crowd like a chameleon?
-        - **Options and Trims**: Are the choices as vast as a buffet or as limited as a diet menu?
-        - **Special Info**: Any accolades to brag about or is it as award-winning as a pet rock?
-        - **Description**: How does each feature elevate the motoring experience or fall flat?
-        - **Reason for Score**: Why does this chariot deserve its rating? Be brutally honest.
-        - **Feature Rating**: (🔴, ⚪, 🟢, 🟡)
-        - **Reliability Rating**: Can it survive a cross-country odyssey or is it best kept within city limits?
-        - **Value**: Does it offer a bang for your buck or is it daylight robbery?
-        - **Depreciation**: Will it hold onto its value like a miser or shed pounds faster than a crash diet?
+      - **0 to 60mph**: {product_name['0_to_60']} seconds. Does it bolt like a cheetah or amble like a tranquilized sloth?
+      - **Technology**: {product_name['technology']}. Is it brimming with more gadgets than a Bond car or does it flounder with the tech savviness of a stone?
+      - **Characteristics**: {product_name['characteristics']}. Does its design turn heads or is it as inspiring as watching paint dry?
+      - **Options and Trims**: {product_name['options_trims']}. Are there enough choices to confuse a rocket scientist?
+      - **Special Info**: {product_name['special_info']}. Any standout accolades, or is it as celebrated as last year's soggy chips?
+      - **Description**: It sprints from 0 to 60 mph in {product_name['0_to_60']} seconds, demonstrating its sporty pedigree or shocking lack thereof.
+      - **Reason for Score**: Why this score? Because in the world of cars, it’s either a hero or a zero.
+      - **Feature Rating**: {product_name['feature_rating']} (🟢)."
+      - **Reliability Rating**: {product_name['reliability']}. Is it reliable as gravity or as unpredictable as a lottery?
+      - **Value**: {product_name['value']}. Does it offer bang for your buck or is it daylight robbery?"
+      - **Depreciation**: {product_name['depreciation']}. Will it hold its value like a precious heirloom or plunge like a stone in a pond?
 
     ### 3. Comprehensive Specifications
     - **Specifications**:
-      - Provide details for comparison if analyzing multiple chariots.
+      - Provide detailed specs and how they stand up against rivals.
 
     ### 4. Safety Features and Ratings
-    - **Key Safety Features**: What keeps you safe apart from hopes and prayers?
-    - **Safety Concerns**: Any glaring gaps in its armor?
-    - **Safety Ratings**: Is it as secure as Fort Knox or more like a cardboard fort?
+    - **Key Safety Features**: What innovative measures does it have to keep you intact rather than in pieces?
+    - **Safety Concerns**: Any alarming omissions?
+    - **Safety Ratings**: More like a tank or a tin can?
 
     ### 5. Financial Assessment
-    - **Purchase Cost**: Is it a steal or are you being robbed?
-    - **Financing Options**: Can you afford this beast without selling a kidney?
-    - **Insurance Considerations**: Will insuring this be a breeze or a bank breaker?
-    - **Depreciation Rate**: Fast as a racing car or slow as a parade float?
-    - **Financial Tips**: How to avoid financial ruin while indulging your automotive passions?
+    - **Purchase Cost**: Is it a bargain or does it demand an arm and a leg?
+    - **Financing Options**: Can you afford it without signing away your firstborn?
+    - **Insurance Considerations**: Will you sleep easy or weep at the premiums?
+    - **Depreciation Rate**: Rapid as a meteorite or slow as continental drift?
+    - **Financial Tips**: How to own it without remortgaging your soul?
 
     ### 6. Buying Tips
-    - **Selection Guidance**: Choosing the right steed for your stable.
-    - **Optimal Purchase Time**: Best time to buy to avoid getting fleeced.
-    - **Negotiation Tactics**: Haggling tips to make market traders weep.
-    - **Pre-purchase Inspections**: Ensuring you don’t buy a polished lemon.
+    - **Selection Guidance**: How to pick the gem among the stones.
+    - **Optimal Purchase Time**: When to buy to ensure you're not taken for a ride.
+    - **Negotiation Tactics**: Bargaining strategies to make even a car salesman blush.
+    - **Pre-purchase Inspections**: Avoid buying a polished turd.
 
     ### 7. Maintenance and Upkeep
-    - **Maintenance Schedule**: Keep it purring like a kitten.
-    - **Common Issues**: Common gremlins to watch out for.
-    - **Longevity Tips**: How to keep it running longer than expected.
+    - **Maintenance Schedule**: Keeping it running smoother than a greased weasel.
+    - **Common Issues**: Frequent gremlins to watch out for.
+    - **Longevity Tips**: How to prolong its lifespan beyond what's expected.
 
     ### 8. Comparable Models
-    - **Model Comparisons**:
+    - **Model Comparisons**: How it measures up to its contemporaries.
 
     ### 9. Potential Issues and Cautions
     - **Common Problems**:
