@@ -131,7 +131,7 @@ def get_analysis(product_name):
                 {"role": "system", "content": prompt},
                 {"role": "user", "content": product_name}
             ],
-            max_tokens=5000,
+            max_tokens=4096,
         )
         analysis = response.choices[0].message.content.strip()
         r.set(key, analysis)
