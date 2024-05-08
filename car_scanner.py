@@ -37,7 +37,7 @@ st.markdown(
 input_method = st.radio("Select Input Method", ("Search Box", "File Upload", "Camera Capture"))
 
 # Define the function for getting search suggestions with extra flexibility
-def get_search_suggestions(query, **kwargs):
+def get_search_suggestions(query, kwargs):
     try:
         # Add '/complete/' and 'client' parameter to the search URL
         url = f"http://google.com/complete/search?client=chrome&q={query}"
@@ -65,65 +65,65 @@ def get_analysis(product_name):
         prompt = f"""Write a vehicle report on {product_name} as if you are a famous, witty British car reviewer focused on the USA market. Be humorous and candid in your critique and praise, but back-up your reasoning so the reader understand why. Make the review comprehensive in the following format:
 
     ## Comprehensive Vehicle Report Outline
-    ### 1. Summary
-    - **Overview & Review**:  year, make, model, trim: informative review, at least a paragraph long, using facts and reasoning to justify the review.
-    - **Overall Rating**: Rate from 1 to 5 ⭐️; use icons:⭐️ for 'a miserable disappointment', ⭐️⭐️ for 'utterly mundane', ⭐️⭐️⭐️ for 'surprisingly tolerable', ⭐️⭐️⭐️⭐️ for 'wowie wo woah!', ⭐️⭐️⭐️⭐️  'an absolute revelation'. Be sure to explain the rating scale in a table format and not a bullet list for ease of readability.
-    - **Summary**: Provide a expansive and humorous overview of the vehicle's overall charm or lack thereof.
-    ### 2. Detailed Feature Analysis: Create a table with the following row items, using the star rating system. Provide the reader with insights into why the rating is as it is:
-      - **Notable Features**:
-      - **0 to 60mph**:
-      - **Technology**: 
-      - **Characteristics**:
-      - **Options and Trims**: 
-      - **Special Info**:
-      - **Reason for Score**:
-      - **Feature Rating**: 
-      - **Reliability Rating**:
-      - **Value**:
-      - **Depreciation**: 
+     1. Summary
+    - Overview & Review:  year, make, model, trim: informative review, at least a paragraph long, using facts and reasoning to justify the review.
+    - Overall Rating: Rate from 1 to 5 ⭐️; use icons:⭐️ for 'a miserable disappointment', ⭐️⭐️ for 'utterly mundane', ⭐️⭐️⭐️ for 'surprisingly tolerable', ⭐️⭐️⭐️⭐️ for 'wowie wo woah!', ⭐️⭐️⭐️⭐️  'an absolute revelation'. Be sure to explain the rating scale in a table format and not a bullet list for ease of readability.
+    - Summary: Provide a expansive and humorous overview of the vehicle's overall charm or lack thereof.
+     2. Detailed Feature Analysis: Create a table with the following row items, using the star rating system. Provide the reader with insights into why the rating is as it is:
+      - Notable Features:
+      - 0 to 60mph:
+      - Technology: 
+      - Characteristics:
+      - Options and Trims: 
+      - Special Info:
+      - Reason for Score:
+      - Feature Rating: 
+      - Reliability Rating:
+      - Value:
+      - Depreciation: 
 
-    ### 3. Comprehensive Specifications
-    - **Specifications**: Create a table with common car specifications like hp, weight and so on.
+     3. Comprehensive Specifications
+    - Specifications: Create a table with common car specifications like hp, weight and so on.
 
-    ### 4. Safety Features and Ratings: Create a table with row items as follows:
-    - **Key Safety Features**: 
-    - **Safety Concerns**:
-    - **Safety Ratings**: 
+     4. Safety Features and Ratings: Create a table with row items as follows:
+    - Key Safety Features: 
+    - Safety Concerns:
+    - Safety Ratings: 
 
-    ### 5. Financial Assessment: Create a table with following row items:
-    - **Purchase Cost**: 
-    - **Financing Options**: 
-    - **Insurance Considerations**: 
-    - **Depreciation Rate**:  
-    - **Financial Tips**:  
+     5. Financial Assessment: Create a table with following row items:
+    - Purchase Cost: 
+    - Financing Options: 
+    - Insurance Considerations: 
+    - Depreciation Rate:  
+    - Financial Tips:  
 
-    ### 6. Buying Tips:  Create a table with following row items:
-    - **Selection Guidance**: 
-    - **Optimal Purchase Time**:  
-    - **Negotiation Tactics**:  
-    - **Pre-purchase Inspections**:  
+     6. Buying Tips:  Create a table with following row items:
+    - Selection Guidance: 
+    - Optimal Purchase Time:  
+    - Negotiation Tactics:  
+    - Pre-purchase Inspections:  
 
-    ### 7. Maintenance and Upkeep:  Create a table with following row items:
-    - **Maintenance Schedule**:  
-    - **Common Issues**:  
-    - **Longevity Tips**:  
+     7. Maintenance and Upkeep:  Create a table with following row items:
+    - Maintenance Schedule:  
+    - Common Issues:  
+    - Longevity Tips:  
 
-    ### 8. Comparable Models:  Create a table with following row items:
-    - **Model Comparisons**: 
+     8. Comparable Models:  Create a table with following row items:
+    - Model Comparisons: 
 
-    ### 9. Potential Issues and Cautions:  Create a table with following row items:
-    - **Common Problems**:
-    - **Warning Signs**: 
+     9. Potential Issues and Cautions:  Create a table with following row items:
+    - Common Problems:
+    - Warning Signs: 
 
-    ### 10. Fun Facts and Unique Quirks
-    - **Interesting Details**:
+     10. Fun Facts and Unique Quirks
+    - Interesting Details:
 
-    ### 11. Recommendations on Best Years & Trims:  Create a table with following row items:
-    - **Best Years**:
-    - **Best Trims**:
+     11. Recommendations on Best Years & Trims:  Create a table with following row items:
+    - Best Years:
+    - Best Trims:
 
-    ### 12. Sources: List URLs and a optimized google search link to get more info for {product_name}.
-    - **References**:
+     12. Sources: List URLs and a optimized google search link to get more info for {product_name}.
+    - References:
     """
         response = client.chat.completions.create(
             model="gpt-4-turbo",
@@ -141,7 +141,7 @@ def get_analysis(product_name):
 def clean_text_for_tts(text):
     # Remove markdown links and clean special characters
     text = re.sub(r'\[(.*?)\]\(.*?\)', r'\1', text)  # Replace markdown links with just the text
-    text = text.replace('|', ', ').replace('-', ' ').replace('**', '')  # Clean up pipes, dashes, and bold markdown
+    text = text.replace('|', ', ').replace('-', ' ').replace('', '')  # Clean up pipes, dashes, and bold markdown
     return text
 
 def display_analysis(analysis, mute_audio=False):
@@ -160,7 +160,7 @@ if input_method == "Search Box":
     st.title("Search Vehicles")
     # Instruction for using the search box
     st.markdown("""
-    **Instructions for Search Box:**
+    Instructions for Search Box:
     - Enter the vehicle's year, make, model, amd trim in the search box.
     - Select it from the drop down menu.
     - Click "Search" to start the analysis. The AI will generate a report, which may take longer for first-time searches.
@@ -185,7 +185,7 @@ elif input_method == "File Upload":
     st.title("Upload Vehicle Image")
     # Instruction for uploading files
     st.markdown("""
-    **Instructions for File Upload:**
+    Instructions for File Upload:
     - Click 'Upload an Image' to select an image file from your device.
     - Supported formats are JPG and PNG.
     - The app will analyze the image and extract the vehicle for further analysis.
@@ -242,7 +242,7 @@ elif input_method == "Camera Capture":
     st.title("Capture Image with Camera")
     # Instruction for using the camera
     st.markdown("""
-    **Instructions for Camera Capture:**
+    Instructions for Camera Capture:
     - Snap a photo of the vehicle.
     - Ensure the picture is legible to optimize analysis accuracy.
     - The app will process the captured image to identify the vehicle.
