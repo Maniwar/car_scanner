@@ -115,10 +115,13 @@ Ensure each section is rich with detail and context, using clear, engaging langu
 
 # Function to display analysis and convert text to speech
 def clean_text_for_tts(text):
-    # Remove markdown links and clean special characters
-    text = re.sub(r'\[(.*?)\]\(.*?\)', r'\1', text)  # Replace markdown links with just the text
-    text = text.replace('|', ', ').replace('-', ' ').replace('**', '')  # Clean up pipes, dashes, and bold markdown
+    # Replace markdown headers, bold, and list items
+    text = re.sub(r'\*\*(.*?)\*\*', r'\1', text)  # Bold
+    text = re.sub(r'\#(.*?)\n', r'\1. ', text)  # Headers
+    text = re.sub(r'\* (.*?)\n', r'\1. ', text)  # List items
+    text = re.sub(r'\[(.*?)\]\(.*?\)', r'\1', text)  # Markdown links
     return text
+
 
 def display_analysis(analysis, mute_audio=False):
     st.subheader("AI Analysis:")
