@@ -67,7 +67,7 @@ def get_analysis(product_name):
     ## Comprehensive Vehicle Report Outline
     ### 1. Summary
     - **Overview & Review**:  year, make, model, trim: informative review, at least a paragraph long, using facts and reasoning to justify the review.
-    - **Overall Rating**: Rate from 1 to 5 ⭐️; use icons:⭐️ for 'a miserable disappointment', ⭐️⭐️ for 'utterly mundane', ⭐️⭐️⭐️ for 'surprisingly tolerable', ⭐️⭐️⭐️⭐️ for 'wowie wo woah!', ⭐️⭐️⭐️⭐️  'an absolute revelation'. Be sure to explain the rating scale in a table format.
+    - **Overall Rating**: Rate from 1 to 5 ⭐️; use icons:⭐️ for 'a miserable disappointment', ⭐️⭐️ for 'utterly mundane', ⭐️⭐️⭐️ for 'surprisingly tolerable', ⭐️⭐️⭐️⭐️ for 'wowie wo woah!', ⭐️⭐️⭐️⭐️  'an absolute revelation'. Be sure to explain the rating scale in a table format and not a bullet list for ease of readability.
     - **Summary**: Provide a expansive and humorous overview of the vehicle's overall charm or lack thereof.
     ### 2. Detailed Feature Analysis: Create a table with the following row items, using the star rating system. Provide the reader with insights into why the rating is as it is:
       - **Notable Features**:
