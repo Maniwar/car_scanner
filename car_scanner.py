@@ -196,7 +196,7 @@ elif input_method == "File Upload":
             product_name = response.choices[0].message.content
             
             # Display the analysis
-            st.write("Vehicle name:")
+            st.write("Vehicle:")
             st.write(product_name)
             
             analysis = get_analysis(product_name)
@@ -254,7 +254,7 @@ elif input_method == "Camera Capture":
             product_name = response.choices[0].message.content
             
             # Display the analysis
-            st.write("Product name:")
+            st.write("Vehicle:")
             st.write(product_name)
 
             analysis = get_analysis(product_name)
