@@ -66,7 +66,7 @@ def get_analysis(product_name):
 
     ## Comprehensive Vehicle Report Outline
      1. Summary
-    - Rating Scale Explained: Explain the rating scale: Be sure to explain the rating scale in a table format and not a bullet list for ease of readability. Use icons:⭐️ for 'a miserable disappointment', ⭐️⭐️ for 'utterly mundane', ⭐️⭐️⭐️ for 'surprisingly tolerable', ⭐️⭐️⭐️⭐️ for 'wowie wo woah!', ⭐️⭐️⭐️⭐️  'an absolute revelation'. 
+    - Rating Scale Explained: Explain the rating scale in table format, one column per rating, Use icons:⭐️ for 'a miserable disappointment', ⭐️⭐️ for 'utterly mundane', ⭐️⭐️⭐️ for 'surprisingly tolerable', ⭐️⭐️⭐️⭐️ for 'wowie wo woah!', ⭐️⭐️⭐️⭐️  'an absolute revelation'. 
     - Overview & Review:  year, make, model, trim: informative review, at least a paragraph long, using facts and reasoning to justify the review.
     - Overall Rating: Rate from 1 to 5 ⭐️;
     - Summary: Provide a expansive and humorous overview of the vehicle's overall charm or lack thereof.
