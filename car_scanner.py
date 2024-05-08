@@ -69,61 +69,60 @@ def get_analysis(product_name):
     - **Overview**: Year: {product_name} year, Make: {product_name} make, Model: {product_name} model, Trim: {product_name} trim
     - **Overall Rating**: Rate from 1 to 10; use icons: 🔴 for 1-3 'a miserable disappointment', ⚪ for 4-6 'utterly mundane', 🟢 for 7-9 'surprisingly tolerable', 🟡 for 10 'an absolute revelation'
     - **Summary**: Provide a brief and humorous overview of the vehicle's overall charm or lack thereof.
-    ### 2. Detailed Feature Analysis
-    - **Features**:
-      - **0 to 60mph**: {product_name} 0 to 60 seconds mph. Does it bolt like a cheetah or amble like a tranquilized sloth?
-      - **Technology**: {product_name} technology. Is it brimming with more gadgets than a Bond car or does it flounder with the tech savviness of a stone?
-      - **Characteristics**: {product_name} characteristics. Does its design turn heads or is it as inspiring as watching paint dry?
-      - **Options and Trims**: {product_name} options and trims. Are there enough choices to confuse a rocket scientist?
-      - **Special Info**: {product_name} special info. Any standout accolades, or is it as celebrated as last year's soggy chips?
-      - **Reason for Score**: Why this score? Because in the world of cars, {product_name} is either a hero or a zero.
-      - **Feature Rating**: {product_name} feature_rating' 
-      - **Reliability Rating**: {product_name} reliability'. Is it reliable as gravity or as unpredictable as a lottery?
-      - **Value**: {product_name} value. Does it offer bang for your buck or is it daylight robbery?
-      - **Depreciation**: {product_name} depreciation. Will it hold its value like a precious heirloom or plunge like a stone in a pond?
+    ### 2. Detailed Feature Analysis: Create a table with the following row items:
+      - **Notable Features**:
+      - **0 to 60mph**:
+      - **Technology**: 
+      - **Characteristics**:
+      - **Options and Trims**: 
+      - **Special Info**:
+      - **Reason for Score**:
+      - **Feature Rating**: 
+      - **Reliability Rating**:
+      - **Value**:
+      - **Depreciation**: 
 
     ### 3. Comprehensive Specifications
-    - **Specifications**:
-      - Provide detailed specs and how {product_name} stands up against rivals.
+    - **Specifications**: Create a table with common car specifications like hp, weight and so on.
 
-    ### 4. Safety Features and Ratings
-    - **Key Safety Features**: What innovative measures does {product_name} have to keep you intact rather than in pieces?
-    - **Safety Concerns**: Any alarming omissions?
-    - **Safety Ratings**: More like a tank or a tin can?
+    ### 4. Safety Features and Ratings: Create a table with row items as follows:
+    - **Key Safety Features**: 
+    - **Safety Concerns**:
+    - **Safety Ratings**: 
 
-    ### 5. Financial Assessment
-    - **Purchase Cost**: Is {product_name} a bargain or does it demand an arm and a leg?
-    - **Financing Options**: Can you afford {product_name} without signing away your firstborn?
-    - **Insurance Considerations**: Will you sleep easy or weep at the premiums?
-    - **Depreciation Rate**: Rapid as a meteorite or slow as continental drift?
-    - **Financial Tips**: How to own {product_name} without remortgaging your soul?
+    ### 5. Financial Assessment: Create a table with following row items:
+    - **Purchase Cost**: 
+    - **Financing Options**: 
+    - **Insurance Considerations**: 
+    - **Depreciation Rate**:  
+    - **Financial Tips**:  
 
-    ### 6. Buying Tips
-    - **Selection Guidance**: How to pick the gem among the stones.
-    - **Optimal Purchase Time**: When to buy to ensure you're not taken for a ride.
-    - **Negotiation Tactics**: Bargaining strategies to make even a car salesman blush.
-    - **Pre-purchase Inspections**: Avoid buying a polished turd.
+    ### 6. Buying Tips:  Create a table with following row items:
+    - **Selection Guidance**: 
+    - **Optimal Purchase Time**:  
+    - **Negotiation Tactics**:  
+    - **Pre-purchase Inspections**:  
 
-    ### 7. Maintenance and Upkeep
-    - **Maintenance Schedule**: Keeping it running smoother than a greased weasel.
-    - **Common Issues**: Frequent gremlins to watch out for.
-    - **Longevity Tips**: How to prolong its lifespan beyond what's expected.
+    ### 7. Maintenance and Upkeep:  Create a table with following row items:
+    - **Maintenance Schedule**:  
+    - **Common Issues**:  
+    - **Longevity Tips**:  
 
-    ### 8. Comparable Models
-    - **Model Comparisons**: How {product_name} measures up to its contemporaries.
+    ### 8. Comparable Models:  Create a table with following row items:
+    - **Model Comparisons**: 
 
-    ### 9. Potential Issues and Cautions
+    ### 9. Potential Issues and Cautions:  Create a table with following row items:
     - **Common Problems**:
     - **Warning Signs**: 
 
     ### 10. Fun Facts and Unique Quirks
     - **Interesting Details**:
 
-    ### 11. Recommendations on Best Years & Trims
+    ### 11. Recommendations on Best Years & Trims:  Create a table with following row items:
     - **Best Years**:
     - **Best Trims**:
 
-    ### 12. Sources
+    ### 12. Sources: List URLs and a optimized google search link to get more info for {product_name}.
     - **References**:
     """
         response = client.chat.completions.create(
