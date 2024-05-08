@@ -72,8 +72,8 @@ def get_analysis(product_name):
                                     - 'Feature'
                                     - 'Description' (to explain what the feature is and how it benefits you)
                                     - 'Reason for Score'
-                                    - 'Feature Score'
                                     - 'Feature Rating' (marked with icons: 🔴 for poor features, ⚪ for average features, 🟢 for good features, and 🟡 for exceptional features)
+                                    - 'Reliability Rating'
         
                                 If exceptional features are found, immediately below the table, provide a legend for the icons used in the 'Feature Rating' column, explaining that 🟡 represents exceptional features that significantly enhance the driving experience.
         
