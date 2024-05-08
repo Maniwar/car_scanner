@@ -37,7 +37,7 @@ st.markdown(
 input_method = st.radio("Select Input Method", ("Search Box", "File Upload", "Camera Capture"))
 
 # Define the function for getting search suggestions with extra flexibility
-def get_search_suggestions(query, kwargs):
+def get_search_suggestions(query, **kwargs):
     try:
         # Add '/complete/' and 'client' parameter to the search URL
         url = f"http://google.com/complete/search?client=chrome&q={query}"
@@ -141,7 +141,7 @@ def get_analysis(product_name):
 def clean_text_for_tts(text):
     # Remove markdown links and clean special characters
     text = re.sub(r'\[(.*?)\]\(.*?\)', r'\1', text)  # Replace markdown links with just the text
-    text = text.replace('|', ', ').replace('-', ' ').replace('', '')  # Clean up pipes, dashes, and bold markdown
+    text = text.replace('|', ', ').replace('-', ' ').replace('**', '')  # Clean up pipes, dashes, and bold markdown
     return text
 
 def display_analysis(analysis, mute_audio=False):
