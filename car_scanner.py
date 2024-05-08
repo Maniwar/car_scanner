@@ -113,14 +113,17 @@ Ensure each section is rich with detail and context, using clear, engaging langu
         r.set(key, analysis)
         return analysis
 
-# Function to display analysis and convert text to speech
 def clean_text_for_tts(text):
-    # Replace markdown headers, bold, and list items
-    text = re.sub(r'\*\*(.*?)\*\*', r'\1', text)  # Bold
-    text = re.sub(r'\#(.*?)\n', r'\1. ', text)  # Headers
-    text = re.sub(r'\* (.*?)\n', r'\1. ', text)  # List items
-    text = re.sub(r'\[(.*?)\]\(.*?\)', r'\1', text)  # Markdown links
+    # Remove or replace markdown and special characters
+    text = re.sub(r'\*\*(.*?)\*\*', r'\1', text)  # Remove bold markdown
+    text = re.sub(r'\#\#(.*?)\n', r'\1. ', text)  # Translate headers to plain text
+    text = re.sub(r'\#(.*?)\n', r'\1. ', text)  # Ensure single hashes are also replaced
+    text = re.sub(r'\* (.*?)\n', r'\1. ', text)  # Translate markdown list items
+    text = re.sub(r'\[(.*?)\]\(.*?\)', r'\1', text)  # Remove markdown links, keeping link text
+    text = re.sub(r'⭐️', 'star ', text)  # Replace star emojis with word "star"
+    text = text.replace('|', ', ').replace('-', ' ').replace('`', '')  # Remove or replace other special characters
     return text
+
 
 
 def display_analysis(analysis, mute_audio=False):
