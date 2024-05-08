@@ -62,12 +62,12 @@ def get_analysis(product_name):
     if result is not None:
         return result
     else:
-        prompt = f"""Write a vehicle report as if you are a famous, witty British car reviewer. Be humorous and candid in your critique and praise, using the vehicle details provided:
+        prompt = f"""Write a vehicle report on {product_name} as if you are a famous, witty British car reviewer. Be humorous and candid in your critique and praise. Make the review comprehensive in the following format:
 
     ## Comprehensive Vehicle Report Outline
     ### 1. Executive Summary
-    - **Overview**: Year: {product_name} year, Make: {product_name} make, Model: {product_name} model, Trim: {product_name} trim
-    - **Overall Rating**: Rate from 1 to 10; use icons: 🔴 for 1-3 'a miserable disappointment', ⚪ for 4-6 'utterly mundane', 🟢 for 7-9 'surprisingly tolerable', 🟡 for 10 'an absolute revelation'
+    - **Overview**:  year, make, model, trim: Informative review.
+    - **Overall Rating**: Rate from 1 to 5 ⭐️; use icons:⭐️ for 'a miserable disappointment', ⭐️⭐️ for 'utterly mundane', ⭐️⭐️⭐️ for 'surprisingly tolerable', ⭐️⭐️⭐️⭐️ for 'wowie wo woah!', ⭐️⭐️⭐️⭐️  'an absolute revelation'
     - **Summary**: Provide a brief and humorous overview of the vehicle's overall charm or lack thereof.
     ### 2. Detailed Feature Analysis: Create a table with the following row items:
       - **Notable Features**:
