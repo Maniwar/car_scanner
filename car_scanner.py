@@ -62,51 +62,42 @@ def get_analysis(product_name):
     if result is not None:
         return result
     else:
-        prompt = f"""Write a vehicle report on {product_name} as if you are a famous, witty British car reviewer focused on the USA market. Be humorous and candid in your critique and praise and back-up your reasoning so the reader understand why. Make the review comprehensive in the following format:
+        prompt = f"""Write a vehicle report on {product_name} as a well-known, witty British car reviewer for the USA market. Be humorous and informative, balancing critique with praise. Use the following outline:
 
-    ## Comprehensive Vehicle Report Outline
-     1. Summary
-    - Overall Rating: Rate from 1 to 5 ⭐️;
-    - Rating Scale Explained: Explain the rating scale in table format, one column in the table per rating, Use icons:⭐️ a miserable disappointment, ⭐️⭐️ utterly mundane, ⭐️⭐️⭐️ surprisingly tolerable, ⭐️⭐️⭐️⭐️wowie wo woah', ⭐️⭐️⭐️⭐️  an absolute revelation. 
-    
-    - Overview & Review:  year, make, model, trim: informative review, at least several paragraph long, using facts and reasoning to justify the review, drawing insightful distrinctions. Provide a expansive and humorous overview of the vehicle's overall charm or lack thereof.
-     
-     2. Detailed Feature Analysis: Create a table with the row items, using the star rating system. Provide the reader with insights into why the rating is as it is. Be specific about performance measures like MPG and so on:
+1. **Summary**
+   - **Overall Rating**: 1-5 stars; explain the scale with icons: ⭐️ (poor) to ⭐️⭐️⭐️⭐️⭐️ (excellent).
+   - **Overview & Review**: Discuss year, make, model, and trim, focusing on vehicle's appeal or shortcomings.
 
-     3. Comprehensive Specifications
-    - Specifications: Create a table with common car specifications like hp, weight and so on.
+2. **Feature Analysis**
+   - Rate features like handling, comfort, and technology using the star system.
 
-     4. Safety Features and Ratings: Create a table with row items as follows:
-    - Key Safety Features: 
-    - Safety Concerns:
-    - Safety Ratings: 
+3. **Specifications**
+   - List specs such as horsepower, weight, and fuel economy.
 
-     5. Financial Assessment: Continue to write a review including the following factors: 
-    - Purchase Cost: 
-    - Insurance Considerations: 
-    - Depreciation Rate:  
+4. **Safety**
+   - Discuss key features, concerns, and official ratings.
 
-     6. Maintenance and Upkeep: 
-    - Maintenance Schedule:  
-    - Common Issues:  
-    - Longevity Tips:  
+5. **Financial Assessment**
+   - Cover purchase cost, insurance factors, and depreciation.
 
-     7. Comparable Models: 
-    - Model Comparisons: 
+6. **Maintenance**
+   - Detail service intervals, common issues, and longevity tips.
 
-     8. Potential Issues and Cautions:  
-    - Common Problems:
-    - Warning Signs: 
+7. **Comparisons**
+   - Compare with similar models.
 
-     9. Fun Facts and Unique Quirks
-    - Interesting Details: Easter eggs or interesting facts
+8. **Issues and Cautions**
+   - List common problems and warning signs.
 
-     11. Recommendations on Best Years & Trims: 
-    - Best Years & Trims:
+9. **Unique Aspects**
+   - Highlight fun facts and quirks.
 
-     12. Sources: 
-    - References: Clickable links for deep dive into {product_name}.
-    """
+10. **Recommendations**
+   - Suggest best years and trims.
+
+11. **Sources**
+   - Include links for further reading about {product_name}.
+"""
         response = client.chat.completions.create(
             model="gpt-4-turbo",
             messages=[
