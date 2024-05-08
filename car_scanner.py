@@ -66,7 +66,7 @@ def get_analysis(product_name):
 
     ## Comprehensive Vehicle Report Outline
     ### 1. Executive Summary
-    - **Overview**: Year: {product_name 'year', Make: {product_name 'make', Model: {product_name}'model', Trim: {product_name}'trim'
+    - **Overview**: Year: {product_name} year, Make: {product_name} make, Model: {product_name} model, Trim: {product_name} trim
     - **Overall Rating**: Rate from 1 to 10; use icons: 🔴 for 1-3 'a miserable disappointment', ⚪ for 4-6 'utterly mundane', 🟢 for 7-9 'surprisingly tolerable', 🟡 for 10 'an absolute revelation'
     - **Summary**: Provide a brief and humorous overview of the vehicle's overall charm or lack thereof.
     ### 2. Detailed Feature Analysis
