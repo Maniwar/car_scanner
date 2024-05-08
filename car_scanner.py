@@ -90,35 +90,35 @@ def get_analysis(product_name):
     - Safety Concerns:
     - Safety Ratings: 
 
-     5. Financial Assessment: Create a table with following row items:
+     5. Financial Assessment: Continue to write a review including the following factors: 
     - Purchase Cost: 
     - Financing Options: 
     - Insurance Considerations: 
     - Depreciation Rate:  
     - Financial Tips:  
 
-     6. Buying Tips:  Create a table with following row items:
+     6. Buying Tips:
     - Selection Guidance: 
     - Optimal Purchase Time:  
     - Negotiation Tactics:  
     - Pre-purchase Inspections:  
 
-     7. Maintenance and Upkeep:  Create a table with following row items:
+     7. Maintenance and Upkeep: 
     - Maintenance Schedule:  
     - Common Issues:  
     - Longevity Tips:  
 
-     8. Comparable Models:  Create a table with following row items:
+     8. Comparable Models: 
     - Model Comparisons: 
 
-     9. Potential Issues and Cautions:  Create a table with following row items:
+     9. Potential Issues and Cautions:  
     - Common Problems:
     - Warning Signs: 
 
      10. Fun Facts and Unique Quirks
     - Interesting Details:
 
-     11. Recommendations on Best Years & Trims:  Create a table with following row items:
+     11. Recommendations on Best Years & Trims: 
     - Best Years:
     - Best Trims:
 
