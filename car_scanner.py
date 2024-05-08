@@ -71,17 +71,16 @@ def get_analysis(product_name):
     - **Summary**: Provide a brief and humorous overview of the vehicle's overall charm or lack thereof.
     ### 2. Detailed Feature Analysis
     - **Features**:
-      - **0 to 60mph**: {product_name['0_to_60']} seconds. Does it bolt like a cheetah or amble like a tranquilized sloth?
-      - **Technology**: {product_name['technology']}. Is it brimming with more gadgets than a Bond car or does it flounder with the tech savviness of a stone?
-      - **Characteristics**: {product_name} 'characteristics'. Does its design turn heads or is it as inspiring as watching paint dry?
-      - **Options and Trims**: {product_name} 'options_trims'. Are there enough choices to confuse a rocket scientist?
-      - **Special Info**: {product_name} 'special_info'. Any standout accolades, or is it as celebrated as last year's soggy chips?
-      - **Description**: It sprints from 0 to 60 mph in {product_name} 0 to 60pmh seconds, demonstrating its sporty pedigree or shocking lack thereof.
-      - **Reason for Score**: Why this score? Because in the world of cars, it’s either a hero or a zero.
+      - **0 to 60mph**: {product_name} 0 to 60 seconds mph. Does it bolt like a cheetah or amble like a tranquilized sloth?
+      - **Technology**: {product_name} technology. Is it brimming with more gadgets than a Bond car or does it flounder with the tech savviness of a stone?
+      - **Characteristics**: {product_name} characteristics. Does its design turn heads or is it as inspiring as watching paint dry?
+      - **Options and Trims**: {product_name} options and trims. Are there enough choices to confuse a rocket scientist?
+      - **Special Info**: {product_name} special info. Any standout accolades, or is it as celebrated as last year's soggy chips?
+      - **Reason for Score**: Why this score? Because in the world of cars, {product_name} is either a hero or a zero.
       - **Feature Rating**: {product_name} feature_rating' 
       - **Reliability Rating**: {product_name} reliability'. Is it reliable as gravity or as unpredictable as a lottery?
-      - **Value**: {product_name} value'. Does it offer bang for your buck or is it daylight robbery?
-      - **Depreciation**: {product_name}'depreciation'. Will it hold its value like a precious heirloom or plunge like a stone in a pond?
+      - **Value**: {product_name} value. Does it offer bang for your buck or is it daylight robbery?
+      - **Depreciation**: {product_name} depreciation. Will it hold its value like a precious heirloom or plunge like a stone in a pond?
 
     ### 3. Comprehensive Specifications
     - **Specifications**:
