@@ -1,0 +1,4 @@
+openai
+gtts
+streamlit_searchbox
+redis
