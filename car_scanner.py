@@ -68,7 +68,7 @@ def get_analysis(product_name):
         
                                 1. **Overall Vehicle Assessment**: State the year, make, model, and trim, and provide an overall rating for the it (from 1 to 10, where 1 is least recommended and 10 is highly recommended, marked with a single icon: 🔴 for poor features, ⚪ for average features, 🟢 for good features, and 🟡 for exceptional features) in a table, and also provide a brief summary of the it's performance and suitability based on its specifications below that. If a score is lower for one car over another, please help to explain why at the end of this section.
         
-                                2. **Feature Analysis**: Present the features in a table format; if more than one, ensure there are separate tables for each, labeled so we know which they relate to. The table(s) should include the following columns:
+                                2. **Feature Analysis**: Present the features in a bullet list format; if more than one, ensure there are separate lists for each, labeled so we know which they relate to. The lists should include the following headings:
                                     - 'Feature'
                                     - '0 to 60mph'
                                     - 'Technology'
