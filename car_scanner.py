@@ -70,7 +70,7 @@ def get_analysis(product_name):
     - Rating Scale Explained: Explain the rating scale in table format, one column per rating, Use icons:⭐️ a miserable disappointment, ⭐️⭐️ utterly mundane, ⭐️⭐️⭐️ surprisingly tolerable, ⭐️⭐️⭐️⭐️wowie wo woah', ⭐️⭐️⭐️⭐️  an absolute revelation. 
     - Overview & Review:  year, make, model, trim: informative review, at least several paragraph long, using facts and reasoning to justify the review, drawing insightful distrinctions.
     - Summary: Provide a expansive and humorous overview of the vehicle's overall charm or lack thereof.
-     2. Detailed Feature Analysis: Create a table with the following row items, using the star rating system. Provide the reader with insights into why the rating is as it is. Don't be too generous with four or five stars, reserve those for best of breed. Don't be afraid to give one or two stars based on consumer reviews and professional reviewers sentiment:
+     2. Detailed Feature Analysis: Create a table with the row items, using the star rating system. Provide the reader with insights into why the rating is as it is. Be specific about performance measures like MPG and so on:
 
      3. Comprehensive Specifications
     - Specifications: Create a table with common car specifications like hp, weight and so on.
