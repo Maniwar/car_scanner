@@ -25,7 +25,7 @@ st.markdown(
     <div style="display:flex;align-items:center">
         <i class="fas fa-car" style="font-size:48px; margin-right: 10px;"></i>
         <div>
-            <h3>Discover Your Car's Facts</h3>
+            <h3>Discover Your Vehicle's Facts</h3>
             <p>This app uses AI to provide detailed information and facts about your vehicle.</p>
         </div>
     </div>
@@ -66,7 +66,7 @@ def get_analysis(product_name):
         
                                 For this task, organize your output into the following sections:
         
-                                1. **Overall Car Assessment**: State the year, make, model, and trim, and provide an overall rating for the it (from 1 to 10, where 1 is least recommended and 10 is highly recommended, marked with a single icon: 🔴 for poor features, ⚪ for average features, 🟢 for good features, and 🟡 for exceptional features) in a table, and also provide a brief summary of the it's performance and suitability based on its specifications below that. If a score is lower for one car over another, please help to explain why at the end of this section.
+                                1. **Overall Vehicle Assessment**: State the year, make, model, and trim, and provide an overall rating for the it (from 1 to 10, where 1 is least recommended and 10 is highly recommended, marked with a single icon: 🔴 for poor features, ⚪ for average features, 🟢 for good features, and 🟡 for exceptional features) in a table, and also provide a brief summary of the it's performance and suitability based on its specifications below that. If a score is lower for one car over another, please help to explain why at the end of this section.
         
                                 2. **Feature Analysis**: Present the features in a table format; if more than one, ensure there are separate tables for each, labeled so we know which they relate to. The table(s) should include the following columns:
                                     - 'Feature'
@@ -154,7 +154,7 @@ elif input_method == "File Upload":
     **Instructions for File Upload:**
     - Click 'Upload an Image' to select an image file from your device.
     - Supported formats are JPG and PNG.
-    - The app will analyze the image and extract the car for further analysis.
+    - The app will analyze the image and extract the Vehicle for further analysis.
     """)
     uploaded_image = st.file_uploader("Upload an image", type=['jpg', 'png'])
     
@@ -267,7 +267,7 @@ with expander:
     """
 <p style="font-size:14px;">Legal Statement</p>
 <p style="font-size:14px;">
-This application ("App") is provided "as is" without any warranties, express or implied. The information provided by the App is intended to be used for informational purposes only and not as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your qualified car info provider with any questions you may have regarding a car. Never disregard professional advice or delay in seeking it because of something you have read on the App.
+This application ("App") is provided "as is" without any warranties, express or implied. The information provided by the App is intended to be used for informational purposes only and not as a substitute for professional advice, diagnosis, or treatment. Always seek the advice of your qualified info provider with any questions you may have regarding a vehicle. Never disregard professional advice or delay in seeking it because of something you have read on the App.
 </p>
 <p style="font-size:14px;">
 The App uses the OpenAI Application Protocol Interface (API) to analyze  products and provide an assessment. This information is not intended to be exhaustive and does not cover all possible uses, directions, precautions, or adverse effects that may occur. While we strive to provide accurate information, we make no representation and assume no responsibility for the accuracy of information on or available through the App.
