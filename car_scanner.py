@@ -82,38 +82,29 @@ def get_analysis(product_name):
 
      5. Financial Assessment: Continue to write a review including the following factors: 
     - Purchase Cost: 
-    - Financing Options: 
     - Insurance Considerations: 
     - Depreciation Rate:  
-    - Financial Tips:  
 
-     6. Buying Tips:
-    - Selection Guidance: 
-    - Optimal Purchase Time:  
-    - Negotiation Tactics:  
-    - Pre-purchase Inspections:  
-
-     7. Maintenance and Upkeep: 
+     6. Maintenance and Upkeep: 
     - Maintenance Schedule:  
     - Common Issues:  
     - Longevity Tips:  
 
-     8. Comparable Models: 
+     7. Comparable Models: 
     - Model Comparisons: 
 
-     9. Potential Issues and Cautions:  
+     8. Potential Issues and Cautions:  
     - Common Problems:
     - Warning Signs: 
 
-     10. Fun Facts and Unique Quirks
-    - Interesting Details:
+     9. Fun Facts and Unique Quirks
+    - Interesting Details: Easter eggs or interesting facts
 
      11. Recommendations on Best Years & Trims: 
-    - Best Years:
-    - Best Trims:
+    - Best Years & Trims:
 
-     12. Sources: List URLs and a clickable google search link to get more info for {product_name}.
-    - References:
+     12. Sources: 
+    - References: Clickable links for deep dive into {product_name}.
     """
         response = client.chat.completions.create(
             model="gpt-4-turbo",
