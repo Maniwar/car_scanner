@@ -62,7 +62,7 @@ def get_analysis(product_name):
     if result is not None:
         return result
     else:
-        prompt = f"""Your primary role is to thoroughly analyze the '{product_name}', focusing on its specifications and features, and provide a factual report about the car. If comparing multiple cars, you should always use a table to offer a clear comparison to help the user make an informed choice. Please use section dividers to separate all these points.
+        prompt = f"""Your primary role is to thoroughly analyze the '{product_name}', focusing on its specifications and features, and provide a factual report about the car or motorcycle. If comparing multiple cars, you should always use a table to offer a clear comparison to help the user make an informed choice. Please use section dividers to separate all these points.
         
                                 For this task, organize your output into the following sections:
         
@@ -222,7 +222,7 @@ elif input_method == "Camera Capture":
             # Define user message content
             user_message_content = {
                 "type": "text",
-                "text": """Reply with only the car year, make, and model name. """
+                "text": """Reply with only the car or motorcycle year, make, and model, and specifications name. Example: 2002 honda accord ex """
             }
             
             # Send image and user message to OpenAI API
