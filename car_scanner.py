@@ -62,34 +62,34 @@ def get_analysis(product_name):
     if result is not None:
         return result
     else:
-        prompt = f"""Your primary role is to thoroughly analyze the '{product_name}', focusing on its specifications and features, and provide a factual report about the car or motorcycle. If comparing multiple cars, you should always use a table to offer a clear comparison to help the user make an informed choice. Please use section dividers to separate all these points.
+        prompt = f"""Your primary role is to thoroughly analyze the '{product_name}', focusing on its specifications and features, and provide a factual report about it. If comparing multiple, you should always use a table to offer a clear comparison to help the user make an informed choice. Please use section dividers to separate all these points.
         
                                 For this task, organize your output into the following sections:
         
-                                1. **Overall Car Assessment**: State the car's model, make, and year, and provide an overall rating for the car (from 1 to 10, where 1 is least recommended and 10 is highly recommended, marked with a single icon: 🔴 for poor features, ⚪ for average features, 🟢 for good features, and 🟡 for exceptional features) in a table, and also provide a brief summary of the car's performance and suitability based on its specifications below that. If a score is lower for one car over another, please help to explain why at the end of this section.
+                                1. **Overall Car Assessment**: State the year, make, model, and trim, and provide an overall rating for the it (from 1 to 10, where 1 is least recommended and 10 is highly recommended, marked with a single icon: 🔴 for poor features, ⚪ for average features, 🟢 for good features, and 🟡 for exceptional features) in a table, and also provide a brief summary of the it's performance and suitability based on its specifications below that. If a score is lower for one car over another, please help to explain why at the end of this section.
         
-                                2. **Feature Analysis**: Present the car's features in a table format; if more than one car, ensure there are separate tables for each, labeled so we know which car they relate to. The table(s) should include the following columns:
+                                2. **Feature Analysis**: Present the features in a table format; if more than one, ensure there are separate tables for each, labeled so we know which they relate to. The table(s) should include the following columns:
                                     - 'Feature'
-                                    - 'Description' (to explain what the feature is and how it benefits the driver)
+                                    - 'Description' (to explain what the feature is and how it benefits you)
                                     - 'Reason for Score'
                                     - 'Feature Score'
                                     - 'Feature Rating' (marked with icons: 🔴 for poor features, ⚪ for average features, 🟢 for good features, and 🟡 for exceptional features)
         
                                 If exceptional features are found, immediately below the table, provide a legend for the icons used in the 'Feature Rating' column, explaining that 🟡 represents exceptional features that significantly enhance the driving experience.
         
-                                3. **Specifications**: Include the car's specifications in a secondary table. If more than one car, include both in one table.
+                                3. **Specifications**: Include the specifications in a secondary table. If more than one, include both in one table.
         
-                                4. **Safety Features**: Highlight key safety features and their importance. Identify any areas where the car might lack in safety or has exceptional safety features. Discuss any relevant crash test ratings and what they imply for the driver and passengers.
+                                4. **Safety Features**: Highlight key safety features and their importance. Identify any areas where the it might lack in safety or has exceptional safety features. Discuss any relevant test ratings and what they imply.
         
-                                5. **Sources**: Cite all your references under this heading. Each source should be linked to its original location. List applicable automotive publications or testing results that support your analysis, providing links for each.
+                                5. **Sources**: Cite all your references under this heading. Each source should be linked to its original location.
         
-                                6. **Comparable Models**: Offer a bullet list of similar cars for comparison, noting key differences in features and specifications.
+                                6. **Comparable Models**: Offer a bullet list of similar ones for comparison, noting key differences in features and specifications.
                                
-                                7. **Caution**: Offer a buller list of things to watch out for in terms of common problem. 
+                                7. **Caution**: Offer a buller list of things to watch out for in terms of common problems. 
                                 
-                                8. **Fun Facts and Neat Quirks**: Offer a bullet list of fun facts and quirks about the vehicle.
+                                8. **Fun Facts and Neat Quirks**: Offer a bullet list of fun facts and quirks about it.
                                 
-                                9. **Best Years**: Offer advice on which represents the best years for the model and provide reasoning behide why."""
+                                9. **Best Years & Trim**: Offer advice on which represents the best years and trim for the model and provide reasoning behide why."""
 
         response = client.chat.completions.create(
             model="gpt-4-turbo",
@@ -123,7 +123,7 @@ def display_analysis(analysis, mute_audio=False):
 
 # Search Box/Input Method
 if input_method == "Search Box":
-    st.title("Search Cars")
+    st.title("Search Vehicles")
     # Instruction for using the search box
     st.markdown("""
     **Instructions for Search Box:**
@@ -148,7 +148,7 @@ if input_method == "Search Box":
 
 # File Upload/Input Method
 elif input_method == "File Upload":
-    st.title("Upload Product Image")
+    st.title("Upload Vehicle Image")
     # Instruction for uploading files
     st.markdown("""
     **Instructions for File Upload:**
@@ -171,7 +171,7 @@ elif input_method == "File Upload":
             # Define user message content
             user_message_content = {
                 "type": "text",
-                "text": """Reply with only the car's or motorcycle's year, make, and model name. """
+                "text": """Reply with only the year, make, model, and trim name. Example: 2010 Honda Accord EX."""
             }
             
             # Send image and user message to OpenAI API
@@ -196,7 +196,7 @@ elif input_method == "File Upload":
             product_name = response.choices[0].message.content
             
             # Display the analysis
-            st.write("Product name:")
+            st.write("Vehicle name:")
             st.write(product_name)
             
             analysis = get_analysis(product_name)
@@ -209,9 +209,9 @@ elif input_method == "Camera Capture":
     # Instruction for using the camera
     st.markdown("""
     **Instructions for Camera Capture:**
-    - Snap a photo of the car.
+    - Snap a photo of the vehicle.
     - Ensure the picture is legible to optimize analysis accuracy.
-    - The app will process the captured image to identify the car.
+    - The app will process the captured image to identify the vehicle.
     """)
     captured_image = st.camera_input("Capture an image")
     
@@ -228,7 +228,7 @@ elif input_method == "Camera Capture":
             # Define user message content
             user_message_content = {
                 "type": "text",
-                "text": """Reply with only the car's or motorcycle's year, make, and model, and specifications name. Example: 2002 honda accord ex """
+                "text": """Reply with only the year, make, and model, and trim name. Example: 2002 Honda Accord EX."""
             }
             
             # Send image and user message to OpenAI API
