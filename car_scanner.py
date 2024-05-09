@@ -149,7 +149,7 @@ if input_method == "Search Box":
     """)
     product_name = st_searchbox(
         search_function=get_search_suggestions,
-        placeholder="Enter vehicle(s), click search. e.g.  1999 honda accord ex",
+        placeholder="Enter vehicle(s), click search. (1999 honda accord ex)",
         label=None,
         clear_on_submit=False,
         clearable=True,
