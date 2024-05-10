@@ -102,7 +102,7 @@ Ensure each section is rich with detail and context, using clear, engaging langu
 
 """
         response = client.chat.completions.create(
-            model="gpt-4-turbo",
+            model="gpt-3.5-turbo-0125",
             messages=[
                 {"role": "system", "content": prompt},
                 {"role": "user", "content": product_name}
