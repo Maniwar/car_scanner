@@ -66,7 +66,7 @@ def get_analysis(product_name):
 
 1. **Summary**
    - **Overall Rating**: First Rate the vehicle from 1 to 5 ⭐️. 
-   - **Rating System Explained**: Next Provide a detailed explanation of what each star rating represents.
+   - **Rating System Explained**: Next Provide a detailed explanation of what each star rating represents in a table.
    - **Overview & Review**: Offer a thorough review discussing the year, make, model, and trim. Highlight unique features, overall performance, and market appeal. Include anecdotes or comparisons to bring the review to life.
 
 2. **Feature Analysis**
