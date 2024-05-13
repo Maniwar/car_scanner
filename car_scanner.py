@@ -57,7 +57,7 @@ def get_search_suggestions(query, **kwargs):
 
 # Function to retrieve ingredients and analysis from OpenAI
 def get_analysis(product_name):
-    key = f'analysis:{product_name}'
+    key = f'vehicle:{product_name}'
     result = r.get(key)
     if result is not None:
         return result
