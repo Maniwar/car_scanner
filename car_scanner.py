@@ -66,7 +66,13 @@ def get_analysis(product_name):
 
 1. **Summary**
    - **Overall Rating**: First Rate the vehicle from 1 to 5 ⭐️. 
-   - **Rating System Explained**: Next Provide a detailed explanation of what each star rating represents in a table.
+   Rating Scale:
+1 Star ⭐️: Poor - Significant issues, fails to meet basic expectations.
+2 Stars ⭐️⭐️: Fair - Limited functionality, several problems.
+3 Stars ⭐️⭐️⭐️: Good - Meets basic expectations with some minor drawbacks.
+4 Stars ⭐️⭐️⭐️⭐️: Very Good - Exceeds expectations with minimal issues.
+5 Stars ⭐️⭐️⭐️⭐️⭐️: Excellent - Exceptional performance, top-tier features.
+
    - **Overview & Review**: Offer a thorough review discussing the year, make, model, and trim. Highlight unique features, overall performance, and market appeal. Include anecdotes or comparisons to bring the review to life.
 
 2. **Feature Analysis**
@@ -276,6 +282,40 @@ elif input_method == "Camera Capture":
 
             analysis = get_analysis(product_name)
             display_analysis(analysis) 
+#rating scale ui
+st.markdown(
+    """
+    <style>
+    table {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    th, td {
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+    }
+    </style>
+    <table>
+        <tr>
+            <th>1 Star ⭐️</th>
+            <th>2 Stars ⭐️⭐️</th>
+            <th>3 Stars ⭐️⭐️⭐️</th>
+            <th>4 Stars ⭐️⭐️⭐️⭐️</th>
+            <th>5 Stars ⭐️⭐️⭐️⭐️⭐️</th>
+        </tr>
+        <tr>
+            <td>Poor - Does not meet expectations, significant issues.</td>
+            <td>Fair - Some functionality but with many problems.</td>
+            <td>Good - Meets expectations with average performance and minor drawbacks.</td>
+            <td>Very Good - Exceeds expectations, offering superior functionality with very few issues.</td>
+            <td>Excellent - Exceptional performance with state-of-the-art features.</td>
+        </tr>
+    </table>
+    """,
+    unsafe_allow_html=True
+)
 
 st.divider()
 expander = st.expander("Legal and Data Privacy Statement", expanded=False)
