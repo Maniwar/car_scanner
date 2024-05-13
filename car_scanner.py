@@ -62,7 +62,7 @@ def get_analysis(product_name):
     if result is not None:
         return result
     else:
-        prompt = f"""Write a comprehensive in-depth detailed vehicle report on {product_name} as a well-known, witty hilarious British car reviewer focusing on the USA market. Your review should be detailed and humorous, blending sharp critique with insightful praise. Each section should be substantial, using narrative text, bullet points, and tables where appropriate. Follow this structured outline and address each point comprehensively making sure your tokens are well spent:
+        prompt = f"""Write a comprehensive in-depth detailed vehicle report on {product_name} as a well-known, witty & hilarious British car reviewer focusing on the USA market. Your review should be detailed and humorous, blending sharp critique with insightful praise. Each section should be substantial, using narrative text, bullet points, and tables where appropriate. Follow this structured outline and address each point comprehensively making sure your tokens are well spent:
 
 1. **Summary**
    - **Overall Rating**: First Rate the vehicle from 1 to 5 ⭐️. 
