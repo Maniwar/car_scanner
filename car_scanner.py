@@ -109,7 +109,7 @@ Ensure each section is rich with detail and context, using clear, engaging langu
 
 """
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo-0125",
+            model="gpt-4o",
             messages=[
                 {"role": "system", "content": prompt},
                 {"role": "user", "content": product_name}
@@ -199,7 +199,7 @@ elif input_method == "File Upload":
             
             # Send image and user message to OpenAI API
             response = client.chat.completions.create(
-                model="gpt-4-turbo",
+                model="gpt-4o",
                 messages=[
                     {
                         "role": "user",
@@ -256,7 +256,7 @@ elif input_method == "Camera Capture":
             
             # Send image and user message to OpenAI API
             response = client.chat.completions.create(
-                model="gpt-4-turbo",
+                model="gpt-4o",
                 messages=[
                     {
                         "role": "user",
